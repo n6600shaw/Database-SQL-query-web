@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <style>
+    .query{
+      border:1px solid black;
+      margin:auto;
+      width:50%;
+      padding:20px;
+    }
+  </style>
+</head>
+<!-- Background white, links blue (unvisited), navy (visited), red
+(active) -->
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#000080" alink="#FF0000" style="font-family:Arial;">
+
+  <div>
+    <div id="a" class="query">
+      <form action="/cgi-bin/queryA.py" method="POST">
+        <p>
+          <h4>a. This query retrieves suppliers' information who supplied a given part</h4>
+        </p>
+        <p>Please enter a part’s name:</p> <input type="text" name="pname"><br>
+        <p>Please check the supplier's information you need:</p>
+        <input type="checkbox" name="supplierinfo" value="sid">id<br>
+        <input type="checkbox" name="supplierinfo" value="sname">name<br> 
+        <input type="checkbox" name="supplierinfo" value="address">address<br>
+        <input type="checkbox" name="supplierinfo" value="cost">cost<br>
+        <br>
+       <input type="submit" value="submit"/>
+      </form>
+    </div>
+    <div id="b" class="query">
+      <form action="/cgi-bin/queryB.py" method="POST">
+        <p>
+          <h4>b. This query retrieves the names of the suppliers who have ever supplied a part with that cost or higher.</h4>
+        </p>
+        <p>Please enter a cost:</p> <input type="text" name="cost"><br>
+        <br>
+       <input type="submit" value="submit"/>
+      </form>
+    </div>
+    <div id="c" class="query">
+      <form action="/cgi-bin/queryC.py" method="POST">
+        <p>
+        <p>
+          <h4>c. This query retrieves the names and addresses for the suppliers who charge the most for the part with the given part id</h4>
+        </p>
+        <p>Please enter a part's pid:</p> <input type="text" name="pid"><br>
+        <br>
+       <input type="submit" value="submit"/>
+      </form>
+    </div>
+    <div id="d" class="query">
+      <form action="/cgi-bin/queryD.py" method="POST">
+        <p>
+        <p>
+          <h4>d. This query retrieves the names of the parts with the given color which were supplied by all the suppliers in the given address.</h4>
+        </p>
+        <p>Please enter a color:</p> <input type="text" name="color"><br>
+        <p>Please enter an address:</p> <input type="text" name="address"><br>
+        <br>
+       <input type="submit" value="submit"/>
+      </form>
+    </div>
+    <div id="e" class="query">
+      <form action="/cgi-bin/queryE.py" method="POST">
+        
+        <p>
+          <h4>e. This query retrieves the sids and names of the suppliers in the given address who do not supply any part</h4>
+        </p>
+        <p>Please enter an address:</p> <input type="text" name="address"><br>
+        <br>
+       <input type="submit" value="submit"/>
+      </form>
+    </div>
+
+
+
+
+  </div>
+
+</body>
+
+</html>
